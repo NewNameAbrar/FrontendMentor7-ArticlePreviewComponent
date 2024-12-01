@@ -19,38 +19,37 @@ body {
   justify-content: center;
   height: 100vh;
   background-color: hsl(210, 46%, 95%);
-  /* Light Grayish Blue */
 }
-/* - Very Dark Grayish Blue: hsl(217, 19%, 35%)
-- Desaturated Dark Blue: hsl(214, 17%, 51%)
-- Grayish Blue: hsl(212, 23%, 69%)
-- Light Grayish Blue: hsl(210, 46%, 95%) */
 #main {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
-  width: 768px;
+  width: 810px;
   border-radius: 10px;
   background-color: hsl(0, 0%, 100%);
-  overflow: hidden;
+  overflow: visible;
 }
 .drawersImg {
-  height: 280px;
-  width: 280px;
+  height: 300px;
+  width: 310px;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 10px 0 0 10px;
 }
 .right {
   display: flex;
   flex-direction: column;
   width: 420px;
   gap: 15px;
-  padding-right: 35px;
+  padding: 25px 45px 25px 0;
 }
-.right .title {
+.title {
   color: hsl(217, 19%, 35%);
   font-weight: 700;
 }
-.right .narrative {
+.narrative {
+  margin-top: -5px;
   color: hsl(214, 17%, 51%);
   line-height: 1.5;
 }
@@ -69,7 +68,6 @@ body {
   width: 36px;
   border-radius: 50%;
 }
-
 .name {
   color: hsl(217, 19%, 35%);
   font-weight: 700;
@@ -77,21 +75,65 @@ body {
 .date {
   color: hsl(214, 17%, 51%);
 }
+.modalContainer {
+  position: relative;
+}
 .shareBtn {
   height: 30px;
   width: 30px;
-  border: none;
   background-color: hsl(210, 46%, 95%);
   border-radius: 50%;
+  border: none;
   cursor: pointer;
 }
-.shareBtn:hover {
+.change {
   background-color: hsl(217, 19%, 35%);
   transition: 0.15s;
 }
-.shareBtn:hover img {
+.change img {
   filter: invert(1) brightness(10);
-  transition: 0.15s;
+}
+.modals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: hsl(217, 19%, 35%);
+  border: none;
+  border-radius: 10px;
+  width: 180px;
+  padding: 19px 36px;
+  position: absolute;
+  bottom: 172%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.share {
+  margin-top: -3px;
+  color: hsl(214, 17%, 71%);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+}
+.logos {
+  margin-top: 3px;
+  display: flex;
+  gap: 15px;
+}
+.logo {
+  cursor: pointer;
+}
+.arrow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid hsl(217, 19%, 35%);
 }
 
 @media (max-width: 480px) {
