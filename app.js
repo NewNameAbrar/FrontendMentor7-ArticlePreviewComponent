@@ -8,17 +8,17 @@ const openModal = () => {
   <p class="share">SHARE</p>
 
   <div class="logos">
-    <div class="logo">
+    <a href="https://www.facebook.com" target="_blank" class="logo">
     <img src='/images/icon-facebook.svg'>
-    </div>
+    </a>
     
-    <div class="logo">
+    <a href="https://www.twitter.com" target="_blank" class="logo">
     <img src='/images/icon-twitter.svg'>
-    </div>
+    </a>
     
-    <div class="logo">
+    <a href="https://www.pinterest.com" target="_blank" class="logo">
     <img src='/images/icon-pinterest.svg'>
-    </div>
+    </a>
   </div>
 
   <div class="arrow"></div>

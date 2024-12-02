@@ -23,18 +23,16 @@ body {
 #main {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-between;
   width: 810px;
   border-radius: 10px;
   background-color: hsl(0, 0%, 100%);
-  overflow: visible;
 }
 .drawersImg {
   height: 300px;
-  width: 310px;
+  width: 300px;
   object-fit: cover;
-  object-position: left;
+  object-position: -5px 0;
   border-radius: 10px 0 0 10px;
 }
 .right {
@@ -135,9 +133,99 @@ body {
   border-right: 10px solid transparent;
   border-top: 10px solid hsl(217, 19%, 35%);
 }
-
+/* laptop */
+@media (max-width: 1024px) and (min-width: 769px) {
+  #main {
+    width: 750px;
+  }
+  .right {
+    width: 380px;
+    padding: 0 35px;
+  }
+  .modals {
+    flex-direction: column;
+    width: 125%;
+  }
+  .share {
+    margin-right: -3px;
+  }
+}
+/* tablet */
+@media (max-width: 768px) and (min-width: 481px) {
+  #main {
+    width: 440px;
+    flex-direction: column;
+  }
+  .drawersImg {
+    height: 440px;
+    width: 440px;
+    border-radius: 10px 10px 0 0;
+  }
+  .right {
+    width: 380px;
+    padding: 30px 30px;
+    gap: 35px;
+  }
+  .modals {
+    gap: 10px;
+    width: 210px;
+    padding: 8px 0;
+    border-radius: 8px;
+    bottom: -19%;
+    left: -375%;
+  }
+  .logos {
+    margin-top: 3px;
+    display: flex;
+    gap: 15px;
+  }
+  .arrow {
+    bottom: 24%;
+    left: 103%;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid hsl(217, 19%, 35%);
+  }
+}
+/*mobile*/
 @media (max-width: 480px) {
   #main {
+    width: 300px;
     flex-direction: column;
+    border-radius: 0;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .drawersImg {
+    border-radius: 0;
+  }
+  .right {
+    width: 260px;
+    margin: 25px 0;
+    padding: 0 20px;
+  }
+  .modals {
+    gap: 10px;
+    width: 200px;
+    padding: 5px 0;
+    border-radius: 8px;
+    bottom: -12%;
+    left: -375%;
+  }
+  .logos {
+    margin-top: 3px;
+    display: flex;
+    gap: 15px;
+  }
+  .arrow {
+    bottom: 22%;
+    left: 103%;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid hsl(217, 19%, 35%);
   }
 }
